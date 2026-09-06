@@ -191,7 +191,6 @@ ul {
         margin: auto;
     }
 }
-
 .header .main-nav > li > a{
     display: flex;
     position: relative;
@@ -206,11 +205,12 @@ ul {
     z-index: 1;
     /* overflow: hidden; */
 }
-@media (max-width: 767px){
-    .header .main-nav > li > a{
-        padding: 10px;
+
+@media (max-width: 767px) {
+    .header .main-nav > li > a {
+        padding: 10px 7px;
         font-size: 14px;
-        height: 4  0px;
+        height: 50px;
     }
 }
 .header .main-nav > li > a:hover{
@@ -345,6 +345,11 @@ ul {
     display: flex;
     align-items: center;
     padding-bottom: 120px;
+}
+@media (max-width: 767px) and (orientation: landscape) {
+    .landing .container {
+        padding-top: 80px;
+    }
 }
 .landing .image img{
     position: relative;
@@ -1067,10 +1072,10 @@ ul {
 }
 .events .info .title{
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     margin: 40px 0 20px;
 }
-.events .info p{
+.events .description{
     color: #777;
     line-height: 1.7;
     font-size: 19px;
@@ -1125,13 +1130,13 @@ ul {
     .events .subscribe-container {
         flex-direction: column;
         align-items: start;
+        text-align: center;
     }
     .events .subscribe {
         width: 100%;
         padding: 35px 18px;
     }
 }
-
 /* End Events */
 
 /* Start Pricing */
@@ -1545,7 +1550,8 @@ ul {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: 1px solid #ccc;
+    border: none;
+    border-bottom: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
     outline: none;
@@ -1583,9 +1589,9 @@ ul {
         text-align: center;
     }
 }
-.footer .container{
+.footer .container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
     gap: 45px;
 }
 .footer .box h3{
