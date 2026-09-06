@@ -894,6 +894,9 @@ ul {
     display: flex;
     align-items: center;
 }
+.our-skills img {
+    width: 550px;
+}
 @media (max-width: 991px){
     .our-skills img{
         display: none;
@@ -949,12 +952,14 @@ ul {
     }
 }
 .work img{
-    max-width: 100%;
+    max-width: 50%;
     margin-right: 100px;
+    border-radius: 20px;
 }
 @media(max-width: 991px){
     .work img{
         margin: 0 0 50px;
+        max-width: 100%;
     }
 }
 .work .container .info .box {
@@ -1071,63 +1076,62 @@ ul {
     font-size: 19px;
     text-align: center;
 }
-.events .subscribe{
-    width: 100%;
-    margin-top: 50px;
+.events .subscribe {
+    background-color: var(--section-background);
+    padding: 48px 18px;
+    margin: 25px auto 0;
+    width: 70%;
+    border-radius: 20px;
 }
-.events .subscribe form{
-    width: 600px;
-    padding: 30px 40px;
-    margin: 20px auto;
-    background-color: #f6f5f5;
-    border-radius: 50px;
+.events .subscribe-container {
+    margin: auto;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     gap: 20px;
 }
-@media(max-width: 767px){
-    .events .subscribe form{
-        flex-direction: column;
-        border-radius: 0;
-        max-width: 100%;
-        padding: 20px;
-    }
+.events .subscribe-title {
+    text-wrap: nowrap;
+    font-weight: bold;
+    font-size: 18px;
+    color: var(--main-color);
 }
-.events .subscribe form input[type = "email"]{
-    border-radius: 50px;
+.events .subscribe input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    background-color: transparent;
     border: none;
-    padding: 20px;
-    flex: 1;
-    caret-color: var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    color: var(--main-color);
 }
-@media(max-width: 767px){
-    .events .subscribe form input[type = "email"]{
-        border-radius: 0;
-    }
-}
-.events .subscribe form input[type="email"]:focus {
+.events .subscribe input[type="email"]:focus {
     outline: none;
 }
-.events .subscribe form input[type="email"]::placeholder {
-    transition: opacity var(--main-transition);
+.events .subscribe input[type="email"]::placeholder {
+    color: var(--main-color);
 }
-.events .subscribe form input[type = "submit"]{
-    border-radius: 50px;
+.events .subscribe input[type="submit"] {
+    padding: 15px;
     border: none;
+    border-radius: 50px;
     background-color: var(--main-color);
     color: white;
-    font-weight: bold;
-    padding: 20px;
     cursor: pointer;
-    transition: var(--main-transition);
 }
-@media(max-width: 767px){
-    .events .subscribe form input[type = "submit"]{
-        border-radius: 0;
-    }
-}
-.events .subscribe form input[type = "submit"]:hover{
+.events .subscribe input[type="submit"]:hover{
     background-color: var(--main-color-alt);
 }
+@media (max-width: 767px) {
+    .events .subscribe-container {
+        flex-direction: column;
+        align-items: start;
+    }
+    .events .subscribe {
+        width: 100%;
+        padding: 35px 18px;
+    }
+}
+
 /* End Events */
 
 /* Start Pricing */
@@ -1460,6 +1464,7 @@ ul {
     padding: 15px;
     border: none;
     border-bottom: 1px solid #ccc;
+    border-radius: 4px;
     background-color: #f9f9f9;
     caret-color: var(--main-color);
 }
@@ -1483,6 +1488,91 @@ ul {
 }
 /* End Discount */
 
+/* Start Contact*/
+.contact {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+    background-color: var(--section-background);
+}
+.contact .main-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+.contact-content {
+    display: flex;
+    background-color: white;
+    gap: 30px;
+    padding: 50px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .12);
+}
+.contact-info,
+.contact-form {
+    flex: 1;
+}
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact .box {
+    padding: 20px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+}
+.contact .box i {
+    color: var(--main-color);
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+.contact .box p {
+    margin: 0;
+}
+.contact .contact-info .box {
+    padding-top: 33px;
+    padding-bottom: 33px;
+}
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.contact-form input {
+    margin-bottom: 25px;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    outline: none;
+    caret-color: var(--main-color);
+}
+.contact-form button {
+    width: 150px;
+    padding: 15px;
+    border: 0;
+    border-radius: 6px;
+    background: var(--main-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.contact-form button:hover {
+    background-color: var(--main-color-alt);
+}
+@media (max-width: 768px) {
+    .contact-content {
+        flex-direction: column;
+        padding: 30px;
+    }
+}
+/* End Contact */
+
 /* Start Footer */
 .footer{
     padding: 70px 0 0;
@@ -1495,8 +1585,8 @@ ul {
 }
 .footer .container{
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 45px;
 }
 .footer .box h3{
     color: white;
@@ -1563,37 +1653,8 @@ ul {
     margin-right: 10px;
     color: var(--main-color);
 }
-.footer .box .line{
-    display: flex;
-    color: #b9b9b9;
-    margin-bottom: 30px;
-    align-items: center;
-}
-@media(max-width: 767px){
-    .footer .box .line{
-        flex-direction: column;
-    }
-}
-.footer .box .line i{
-    color: var(--main-color);
-    font-size: 25px;
-    margin-right: 10px;
-}
-@media (max-width: 767px) {
-    .footer .box .line i {
-        margin-right: 0;
-        margin-bottom: 15px;
-    }
-}
-.footer .box .line .info{
-    line-height: 1.7;
-    flex: 1;
-}
-.footer .box .line .info span{
-    display: block;
-}
 .footer .footer-gallery img{
-    width: 78px;
+    width: 82px;
     border: 3px solid white;
     margin: 2px;
 }
