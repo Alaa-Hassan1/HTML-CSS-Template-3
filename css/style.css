@@ -1340,10 +1340,11 @@ ul {
     background-color: rgb(255 255 255 / 95%);
 }
 .stats h2{
-    width: fit-content;
-    margin: 0 auto 50px;
     font-weight: bold;
     font-size: 40px;
+    width: fit-content;
+    margin: 0 auto 50px;
+    position: relative;
 }
 .stats .container{
     display: grid;
@@ -1550,7 +1551,7 @@ ul {
 .contact-form textarea {
     width: 100%;
     padding: 15px;
-    border: none;
+    border: none ;
     border-bottom: 1px solid #ccc;
     border-radius: 4px;
     background-color: #f9f9f9;
@@ -1587,6 +1588,11 @@ ul {
 @media(max-width: 767px){
     .footer {
         text-align: center;
+    }
+    .footer .box .links {
+        width: fit-content;
+        margin: auto;
+        text-align: left;
     }
 }
 .footer .container {
