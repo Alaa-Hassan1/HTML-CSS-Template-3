@@ -1024,7 +1024,7 @@ ul {
 .events .container{
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 .events img {
     max-width: 450px;
