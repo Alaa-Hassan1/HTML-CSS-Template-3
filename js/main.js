@@ -32,6 +32,16 @@ let counter = setInterval(() => {
 }, 1000);
 // End Events
 
-// Start Awesome
+// Start Skills
+let section = document.querySelector(".our-skills");
+let spans = document.querySelectorAll(".the-progress span");
+console.log(spans);
 
-// End Awesome
+window.onscroll = function(){
+    if (window.scrollY >= section.offsetTop) {
+        spans.forEach(span => {
+            span.style.width = span.dataset.width;
+        })
+    }
+}
+// End Skills
