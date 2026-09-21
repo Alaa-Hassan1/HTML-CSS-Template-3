@@ -937,7 +937,6 @@ ul {
     height: 100%;
     left: 0;
     top: 0;
-    background-color: var(--main-color);
     transition: width 0.3s linear;
 }
 /* End Skills */

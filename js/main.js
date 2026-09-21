@@ -6,7 +6,6 @@ let secondsEl = document.querySelector(".seconds");
 
 let endYearTime = new Date("Dec 31, 2026, 23:59:59").getTime();
 
-
 let counter = setInterval(() => {
     let now = new Date().getTime();
     let diffrence = endYearTime - now;
@@ -35,13 +34,38 @@ let counter = setInterval(() => {
 // Start Skills
 let section = document.querySelector(".our-skills");
 let spans = document.querySelectorAll(".the-progress span");
-console.log(spans);
 
-window.onscroll = function(){
+window.addEventListener("scroll", function(){
     if (window.scrollY >= section.offsetTop) {
         spans.forEach(span => {
             span.style.width = span.dataset.width;
         })
     }
-}
+});
 // End Skills
+
+// start Awesome Stats
+let stats = document.querySelector("#stats");
+let number = document.querySelectorAll(".box .number");
+let started = false;
+
+window.addEventListener("scroll", function() {
+    if (window.scrollY >= stats.offsetTop) {
+        if(!started) {
+            number.forEach((num) => startCount(num));
+        }
+        started = true;
+    }
+});
+
+function startCount(num) {
+    let goal = num.dataset.goal;
+    let counter = setInterval(function(){
+        num.textContent++;
+        if(num.textContent == num.dataset.goal) {
+            clearInterval(counter);
+        }
+    }, 2000 / goal); 
+}
+
+// End Awesome Stats
